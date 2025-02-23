@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coursework</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .coursework {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+     .coursework h2 {
+        margin-top: 0;
+      }
+     .coursework ul {
+        list-style: none;
+        padding: 0;
+      }
+     .coursework li {
+        margin-bottom: 5px;
+      }
+    .coursework a {
+        color: blue;
+        text-decoration: none;
+      }
+    .coursework a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://app.chatwoot.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'Rs7i5mhjmkk7neML8jR3cqnY',
+            baseUrl: BASE_URL,
+            darkMode: true,
+            hideMessageBubble: false,
+            position: 'right',
+            type: 'standard',
+            widgetStyle: {
+              backgroundColor: 'rgba(23, 23, 23, 0.95)',
+              primaryColor: '#3B82F6',
+              borderRadius: '16px',
+              headerTextColor: '#FFFFFF',
+              textColor: '#E5E5E5',
+              articleTextColor: '#F3F4F6',
+              buttonTextColor: '#FFFFFF',
+              buttonBackgroundColor: '#3B82F6',
+              backgroundGradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1))',
+              backdropBlur: '16px'
+            },
+            customAttributes: {
+              hideUserAvatar: true,
+              hideUserName: true
+            }
+          })
+        }
+      })(document,"script");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
